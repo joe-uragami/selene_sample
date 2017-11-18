@@ -20,10 +20,10 @@ class SampleMacCustomTest(unittest.TestCase):
         i5_current_price = driver.find_element_by_css_selector(".current_price").text
         assert "142,800" in i5_current_price
 
-        driver.execute_script('window.scrollTo(0, 100);')
-
+        driver.execute_script('window.scrollTo(0, 600);')
         driver.find_element_by_xpath(
-            '//*[@id="configuration-form"]/div[1]/div[2]/div/div[4]/div[1]/div[1]/div/div/fieldset/ul/li[2]'
+            # '//*[@id="configuration-form"]/div[1]/div[2]/div/div[4]/div[1]/div[1]/div/div/fieldset/ul/li[2]'
+            '//*[@id="configuration-form"]/div[1]/div[2]/div/div[4]/div[1]/div[1]/div/div/fieldset/div/div[2]'
         ).click()
 
         WebDriverWait(driver, 10).until(
