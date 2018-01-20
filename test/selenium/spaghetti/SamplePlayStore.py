@@ -29,7 +29,8 @@ class SamplePlayStoreTest(unittest.TestCase):
 
         WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable(
-                By.CSS_SELECTOR, ".id-corpus-nav-list :nth-child(2) a")
+                (By.CSS_SELECTOR, ".id-corpus-nav-list :nth-child(2) a")
+            )
         )
         driver.find_element_by_css_selector(
             ".id-corpus-nav-list :nth-child(2) a").click()
@@ -42,7 +43,8 @@ class SamplePlayStoreTest(unittest.TestCase):
         driver.execute_script('window.scrollTo(0, 400);')
         element = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable(
-                By.CSS_SELECTOR, ".id-card-list :nth-child(1) div a")
+                (By.CSS_SELECTOR, ".id-card-list :nth-child(1) div a")
+            )
         )
         element.click()
 
